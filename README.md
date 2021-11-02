@@ -1,11 +1,11 @@
 # Docker-ICEcoder
 Build using:
 
-`docker build -t icecoder/docker .`
+`docker build https://github.com/rbelles/Docker-ICEcoder.git`
 
 Then run using:
 
-`docker run -p 8080:80 icecoder/docker`
+`docker run -p 8080:80 Docker-ICEcoder`
 
 Then you can visit http://localhost:8080 to see the index.php welcome page.
 
