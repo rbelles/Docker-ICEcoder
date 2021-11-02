@@ -1,8 +1,4 @@
-#FROM php:8.1.0RC5-apache
-
-FROM php:7.4.10-apache
-
-MAINTAINER ICEcoder <info@icecoder.net>
+FROM php:8.1.0RC5-apache
 
 ENV DEBIAN_FRONTEND noninteractive
 
