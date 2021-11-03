@@ -1,7 +1,7 @@
 # Docker-ICEcoder
 Build using:
 
-`docker build https://github.com/rbelles/Docker-ICEcoder.git`
+`docker build https://github.com/rbelles/Docker-ICEcoder.git --tag ICEcoder:latest`
 
 Then run using:
 
