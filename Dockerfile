@@ -20,7 +20,7 @@ RUN unzip -q /icecoder.zip -d /tmp/
  # unzip -q /icecoder.zip -d /tmp/
   
 FROM base AS deploy
-COPY --from=build /tmp/ICE* /var/www/html/icecoder/
+COPY --from=build --chown=www-data:www-data /tmp/ICE* /var/www/html/icecoder/
 
   #cp -r /tmp/ICE* /var/www/html/icecoder && \
   #rm -rf /icecoder.zip /tmp/ICE* && \
