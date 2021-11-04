@@ -18,4 +18,4 @@ RUN \
 
 FROM base AS deploy
 
-COPY --from=build --chown=www-data:www-data /tmp/ICE* /var/www/html/icecoder
+COPY --from=build /tmp/ICE* /var/www/html/icecoder
