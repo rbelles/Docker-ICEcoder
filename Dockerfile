@@ -4,7 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN \
   a2enmod rewrite && \
   a2enmod ssl && \
-  service apache2 restart && \
+  service apache2 restart
+  
 FROM base AS build
 RUN \
   apt-get update && \
