@@ -13,12 +13,14 @@ RUN \
   apt-get clean all
 
 FROM tools AS build
-RUN \
-  curl -o /icecoder.zip 'https://icecoder.net/download-zip' && \
-  unzip -q /icecoder.zip -d /tmp/
+ADD 'https://icecoder.net/download-zip' /icecoder.zip
+
+#RUN \
+ # curl -o /icecoder.zip 'https://icecoder.net/download-zip' && \
+ # unzip -q /icecoder.zip -d /tmp/
   
-FROM base AS deploy
-COPY --from=build /tmp/ICE* /var/www/html/icecoder/
+#FROM base AS deploy
+#COPY --from=build /tmp/ICE* /var/www/html/icecoder/
 
   #cp -r /tmp/ICE* /var/www/html/icecoder && \
   #rm -rf /icecoder.zip /tmp/ICE* && \
