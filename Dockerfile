@@ -6,14 +6,16 @@ RUN \
   a2enmod ssl && \
   service apache2 restart
   
-FROM base AS build
+FROM base AS tools
 RUN \
   apt-get update && \
   apt-get install unzip -y && \
   apt-get clean all
-  
-  #curl -o /icecoder.zip 'https://icecoder.net/download-zip' && \
-  #unzip -q /icecoder.zip -d /tmp/ && \
+
+FROM tools AS build
+RUN \
+  curl -o /icecoder.zip 'https://icecoder.net/download-zip' && \
+  unzip -q /icecoder.zip -d /tmp/
   #cp -r /tmp/ICE* /var/www/html/icecoder && \
   #rm -rf /icecoder.zip /tmp/ICE* && \
   #chown -R www-data.www-data /var/www/html && \
