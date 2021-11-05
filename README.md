@@ -10,24 +10,24 @@ Then run using:
 `docker-compose -f docker-compose.yml up -d`
 
 
-`version: "3.2"
-services:
-  icecoder:
-    container_name: ICECoder
-    image: icecoder:latest
-    restart: unless-stopped
-    network_mode: bridge
-    ports:
-      - 8080:80
+`    version: "3.2"
+     services:
+     icecoder:
+       container_name: ICECoder
+       image: icecoder:latest
+       restart: unless-stopped
+       network_mode: bridge
+       ports:
+         - 8080:80
+       volumes:
+         - ice:/var/www/html/icecoder
     volumes:
-      - ice:/var/www/html/icecoder
-volumes:
-  ice:
-    driver: local
-    driver_opts:
-      device: /home/rbelles/ICEcoder
-      type: none
-      o: bind
+      ice:
+        driver: local
+        driver_opts:
+          device: /home/rbelles/ICEcoder
+          type: none
+          o: bind
 `
 
 
