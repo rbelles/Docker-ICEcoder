@@ -9,8 +9,8 @@ Then run using:
 
 `docker-compose -f docker-compose.yml up -d`
 
-
-`    version: "3.2"
+```yaml
+     version: "3.2"
      services:
      icecoder:
        container_name: ICECoder
@@ -28,7 +28,7 @@ Then run using:
           device: /home/rbelles/ICEcoder
           type: none
           o: bind
-`
+```
 
 
 
